@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {SafeAreaView,Text, Image, View,Pressable, Modal, FlatList } from "react-native";
-import { Stack,useRouter } from "expo-router";
+import { Link, Stack,useRouter } from "expo-router";
 import styles from "./navbar.style"
 const Navbar = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -8,8 +8,8 @@ const Navbar = () => {
   const data=[" مطعم حسني"," 2مطعم حسني","مطعم حسني 3 "];
   return (
     
-    <SafeAreaView style={{flex:1}}>
-      <View >
+    <SafeAreaView className='bg-[#CAE9D9] h-[50px] rounded-br-full rounded-bl-full' >
+      <View>
       <Modal
         animationType="none"
         transparent={true}
@@ -41,7 +41,9 @@ const Navbar = () => {
         headerShadowVisible:false,
         headerLeft:()=>(
            <View style={{display:'flex',flexDirection:"row",gap:15, marginTop:20}}>
+           
              <Image source={require('../../assets/icons/shopIcon.png')} style={{marginTop:20}}></Image>
+           
             <View style={{display:'flex',flexDirection:"column",gap:5}}>
             <Pressable style={{display:'flex',flexDirection:"row",gap:10}}  onPress={(prev) => setModalVisible(prev=>!prev)}>
             <Text style={styles.headerText}>{currentVendor}</Text>
@@ -54,16 +56,20 @@ const Navbar = () => {
             </View> 
         ),
         headerRight:()=>(
-          <View style={{display:'flex',flexDirection:"row",gap:15,marginRight:5,marginTop:20}}>
-            <Image source={require('../../assets/icons/shoppingCart.png')}  resizeMode='contain' style={{marginTop:5}}></Image>
+          <View style={{display:'flex',flexDirection:"row",gap:15,marginRight:5,paddingTop:30}} className='h-[100px] items-baseline'>
+             <Link className='h-full' href={`/cart/Cart`}>
+            <Image  source={require('../../assets/icons/shoppingCart.png')}></Image>
+            </Link>
+            <Link className='h-full' href={`/search/Search`}>
             <Image source={require('../../assets/icons/Search.png')} ></Image>
+            </Link>
             </View>
         ),
         
       
         headerTitle:"",
     }}/>
-    <View style={styles.colorcurve}/>
+    {/* <View style={styles.colorcurve}/> */}
    
       </SafeAreaView>
   )
