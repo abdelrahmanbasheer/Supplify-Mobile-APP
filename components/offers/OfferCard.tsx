@@ -5,14 +5,17 @@ type OfferData = {
     oldPrice: number;
     newPrice: number;
     vendorName: string;
-    img: number; 
+    img: number;
+    id:string;
 }
 import styles from './offersview.style';
+import { Link } from 'expo-router';
 interface OfferCardProps {
     item: OfferData;
 }
 const OfferCard: React.FC<OfferCardProps> = ({ item }) =>{
     return (
+     
       <View style={styles.offerCard}>
         <Image style={{width:140,height:190,borderRadius:20}} source={item.img}></Image>
         <Text  style={styles.oldPrice}>{item.oldPrice}ج.م </Text>
@@ -23,6 +26,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ item }) =>{
         <Image source={require("../../assets/icons/Profile.png")}></Image>
         </View>
       </View>
+     
     );
   };
 export default OfferCard
