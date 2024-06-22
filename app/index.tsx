@@ -1,70 +1,42 @@
-import {ScrollView,SafeAreaView,Text } from "react-native";
-import { Stack,useRouter } from "expo-router";
-import Navbar from "@/components/navbar/Navbar";
-import CategoriesCarousel from "@/components/popular/CategoriesCarousel";
-import OffersView from "@/components/offers/OffersView";
-type offerDataType={
-    
-  itemName:string,
-  oldPrice:number,
-  newPrice: number,
-  vendorName:string,
-  img:number,
-  id:string,
-  descripition?:string,
-  location?:string,
-  timeleft?:string,
-  quantity?:number
-}
-import React, { useEffect } from 'react';
+import { Image, ImageBackground, SafeAreaView, Text, View} from "react-native";
+import React, { useEffect, useState } from 'react';
 import { LogBox } from 'react-native';
+import { Link, Stack } from "expo-router";
+import styles from "./page.styles";
 
-const Home=()=>{
-  const data:offerDataType[]=[
-    {
-        itemName:"20 كيلو لحمه حالة جيدة جدا - 20 كيلو",
-        img:require("../assets/icons/meatOffer.png"),
-        newPrice:5000,
-        oldPrice:6000,
-        vendorName:"محمد رامي",
-        id:"1"
-    },
-    {
-        itemName:"20 كيلو لحمه حالة جيدة جدا - 20 كيلو",
-        img:require("../assets/icons/meatOffer.png"),
-        newPrice:5000,
-        oldPrice:6000,
-        vendorName:"محمد رامي",
-        id:"2"
-    },
-    {
-        itemName:"20 كيلو لحمه حالة جيدة جدا - 20 كيلو",
-        img:require("../assets/icons/meatOffer.png"),
-        newPrice:5000,
-        oldPrice:6000,
-        vendorName:"محمد رامي",
-        id:"3"
-    },
-    {
-        itemName:"20 كيلو لحمه حالة جيدة جدا - 20 كيلو",
-        img:require("../assets/icons/meatOffer.png"),
-        newPrice:5000,
-        oldPrice:6000,
-        vendorName:"محمد رامي",
-        id:"4"
-    },
-]
-useEffect(() => {
-  LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
-}, [])
-    return(
-       
-        <SafeAreaView >
-          <Navbar></Navbar>
-          <CategoriesCarousel></CategoriesCarousel>
-          <OffersView data={data} search={false}></OffersView>
-        </SafeAreaView>
-      
-    )
+const Home = () => {
+  useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }, []);
+
+  return (
+    <SafeAreaView className="">
+      <ImageBackground
+      className=" w-[100%] h-[100%] "
+      source={require("@/assets/images/splash_fourth.png")}
+      resizeMode="cover"
+      >
+        <View className="mt-[270px]">
+                <Image 
+                source={require("@/assets/icons/login_logo.png")} 
+                className="w-[282px]  mx-auto"
+              />
+              <Text className=" text-white text-3xl mx-2 text-center mt-9 mb-3" style={styles.font}>اجعل إدارة مطعمك أو تجارتك أمرًا ممتعًا وبسيطًا</Text>
+              <Text className=" text-white text-xl mx-6 text-center mb-3" style={styles.location}>سجل الان  :</Text>
+              
+              <View className="flex flex-row mx-auto">
+                <Link href={"/login/login"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Text className='text-white' style={styles.offerName}>تاجر</Text>
+              </Link>
+              <Link href={"/login/login"} className='p-3 bg-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Text className='text-white' style={styles.offerName}>مطعم</Text>
+              </Link>
+              </View>
+              <Stack.Screen options={{ headerShown: false }} />
+              </View>
+              </ImageBackground>
+    </SafeAreaView>
+  );
 }
+
 export default Home;
