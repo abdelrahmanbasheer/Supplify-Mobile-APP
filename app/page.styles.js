@@ -23,6 +23,13 @@ font:{
 location:{
    fontFamily: FONT.CairoRegular,   
 },
+bold:{
+   fontFamily: FONT.CairoBold,   
+},
+priceTag:{
+   fontFamily: FONT.CairoBold,
+   lineHeight:20  
+},
 newPrice:{
   fontSize:15,
         fontFamily: FONT.CairoRegular,

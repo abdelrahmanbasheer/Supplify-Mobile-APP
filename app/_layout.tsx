@@ -20,8 +20,8 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    CairoRegular: require('../assets/fonts/Cairo-Regular.ttf'),
-    CairoBold: require("../assets/fonts/Cairo-Bold.ttf")
+    CairoRegular: require('@/assets/fonts/Cairo-Regular.ttf'),
+    CairoBold: require("@/assets/fonts/Cairo-Bold.ttf"),
   }
     
     );

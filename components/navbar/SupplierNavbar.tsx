@@ -25,7 +25,7 @@ const SupplierNavbar = () => {
         ),
         headerRight:()=>(
           <View style={{display:'flex',flexDirection:"row",gap:15,marginRight:5,paddingTop:30}} className='h-[100px] items-baseline'>
-             <Link className='h-full' href={`/cart/Cart`}>
+             <Link className='h-full' href={`/Supplier`}>
             <Image  source={require('../../assets/icons/File Document.png')} ></Image>
             </Link>
             </View>

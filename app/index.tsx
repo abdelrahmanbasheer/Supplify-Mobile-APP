@@ -25,10 +25,10 @@ const Home = () => {
               <Text className=" text-white text-xl mx-6 text-center mb-3" style={styles.location}>سجل الان  :</Text>
               
               <View className="flex flex-row mx-auto">
-                <Link href={"/login/login"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Link href={"/Supplier"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>تاجر</Text>
               </Link>
-              <Link href={"/login/login"} className='p-3 bg-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+              <Link href={"/RestrauntOwner"} className='p-3 bg-[#69B056] w-[88px] rounded-xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>مطعم</Text>
               </Link>
               </View>
