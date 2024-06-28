@@ -1,20 +1,42 @@
-import {ScrollView,SafeAreaView,Text } from "react-native";
-import { Stack,useRouter } from "expo-router";
-import Navbar from "@/components/navbar/Navbar";
-import CategoriesCarousel from "@/components/popular/CategoriesCarousel";
-import OffersView from "@/components/offers/OffersView";
+import { Image, ImageBackground, SafeAreaView, Text, View} from "react-native";
+import React, { useEffect, useState } from 'react';
+import { LogBox } from 'react-native';
+import { Link, Stack } from "expo-router";
+import styles from "./page.styles";
 
+const Home = () => {
+  useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }, []);
 
-const Home=()=>{
-    const router=useRouter();
-    return(
-       
-        <ScrollView  showsVerticalScrollIndicator={false}>
-          <Navbar></Navbar>
-          <CategoriesCarousel></CategoriesCarousel>
-          <OffersView></OffersView>
-        </ScrollView>
-      
-    )
+  return (
+    <SafeAreaView className="">
+      <ImageBackground
+      className=" w-[100%] h-[100%] "
+      source={require("@/assets/images/splash_fourth.png")}
+      resizeMode="cover"
+      >
+        <View className="mt-[270px]">
+                <Image 
+                source={require("@/assets/icons/login_logo.png")} 
+                className="w-[282px]  mx-auto"
+              />
+              <Text className=" text-white text-3xl mx-2 text-center mt-9 mb-3" style={styles.font}>اجعل إدارة مطعمك أو تجارتك أمرًا ممتعًا وبسيطًا</Text>
+              <Text className=" text-white text-xl mx-6 text-center mb-3" style={styles.location}>سجل الان  :</Text>
+              
+              <View className="flex flex-row mx-auto">
+                <Link href={"/Supplier"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Text className='text-white' style={styles.offerName}>تاجر</Text>
+              </Link>
+              <Link href={"/RestrauntOwner"} className='p-3 bg-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Text className='text-white' style={styles.offerName}>مطعم</Text>
+              </Link>
+              </View>
+              <Stack.Screen options={{ headerShown: false }} />
+              </View>
+              </ImageBackground>
+    </SafeAreaView>
+  );
 }
+
 export default Home;

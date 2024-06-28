@@ -79,6 +79,7 @@ const CategoriesCarousel = () => {
         )}
         contentContainerStyle={{columnGap:20}}
         horizontal
+        showsHorizontalScrollIndicator={false}
         />
        
         
