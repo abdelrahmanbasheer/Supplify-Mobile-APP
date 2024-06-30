@@ -86,14 +86,16 @@ const [data, setData] = useState<dataTypes>([])
           data={data}
         renderItem={({item})=>(
           <View style={{display:'flex',gap:30,}}> 
-          <Link href={`/category/${item.category_id}`} style={styles.itemContainer} key={item.category_id}>
+          <Pressable style={styles.itemContainer} key={item.category_id}>
             {
             <Image source={require('../../assets/icons/vegetables.png')}></Image>  
               
             }
           <Image source={item.img}></Image>
+          <Link href={`/category/${item.category_id}`}>
           <Text style={styles.headerBtn}>{item.category_name}</Text>
           </Link>
+          </Pressable>
         </View>
         )}
         contentContainerStyle={{columnGap:20}}

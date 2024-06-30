@@ -35,7 +35,7 @@ const Home = () => {
               <Text className=" text-white text-xl mx-6 text-center mb-3 mt-5" style={styles.location}>عندك حساب ؟</Text>
               
               <View className="flex flex-row mx-auto">
-                <Link href={"/wishlist/Wishlist"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
+                <Link href={"/RestrauntOwner"} className='p-3 mr-5 bg-transparent border-2 border-[#69B056] w-[88px] rounded-xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>مطعم</Text>
               </Link>
               <Link href={"/login/supplierLogin/login"} className='p-3 bg-[#69B056] w-[88px] rounded-xl text-center mt-4'>
