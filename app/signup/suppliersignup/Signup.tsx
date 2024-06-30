@@ -43,12 +43,8 @@ const Signup = () => {
       }
 
       const data = await response.json();
-      const token = data.token;
-
-  
-
       // Navigate to Home screen
-      router.push('/Supplier');
+      router.push('/login/supplierLogin/login');
     } catch (err) {
       console.error(err);
       setErrorMessage("Invalid Email or Password");
@@ -93,7 +89,7 @@ const Signup = () => {
                 value={password}
                 onChangeText={setpassword}
               />
-              <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
+              <Text style={styles.offerName} className='mt-5'>الرقم القومي</Text>
               <TextInput
                 textContentType="password"
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
@@ -102,7 +98,7 @@ const Signup = () => {
                 onChangeText={setNationalId}
          
               />
-              <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
+              <Text style={styles.offerName} className='mt-5'>الاسم الاول</Text>
               <TextInput
                 textContentType="password"
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
@@ -111,7 +107,7 @@ const Signup = () => {
                 onChangeText={setFirstName}
          
               />
-              <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
+              <Text style={styles.offerName} className='mt-5'>الاسم الاخير</Text>
               <TextInput
                 textContentType="password"
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
@@ -120,7 +116,7 @@ const Signup = () => {
                 onChangeText={setLastName}
              
               />
-              <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
+              <Text style={styles.offerName} className='mt-5'>رقم التليفون</Text>
               <TextInput
                 textContentType="password"
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
@@ -129,7 +125,7 @@ const Signup = () => {
                 keyboardType="phone-pad"
               
               />
-              <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
+              <Text style={styles.offerName} className='mt-5'>الرقم التجاري</Text>
               <TextInput
                 textContentType="password"
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
