@@ -36,7 +36,7 @@ const Signup = () => {
     minimum_order_price:string
   )=> {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/owner/signup", {
+      const response = await fetch("http://localhost:3000/api/auth/supplier/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
