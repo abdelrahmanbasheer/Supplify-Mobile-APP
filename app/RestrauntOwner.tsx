@@ -58,7 +58,7 @@ useEffect(() => {
 }, [])
     return(
        
-        <SafeAreaView >
+        <SafeAreaView>
           <Navbar></Navbar>
           <CategoriesCarousel></CategoriesCarousel>
           <OffersView data={data} search={false}></OffersView>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
+import { Button, Pressable, SafeAreaView, ScrollView, Text, TextInput, View } from 'react-native'
 import PageNavbar from "@/components/pageNavbar/PageNavbar";
 import styles from "./page.styles"
 import OffersView from '@/components/offers/OffersView';
@@ -74,7 +74,7 @@ const Search = () => {
       setCurr(items)
     }
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>  
+    <SafeAreaView >  
     <PageNavbar title={"البحث"}></PageNavbar>
       <View className='flex flex-row'>
 
@@ -95,7 +95,7 @@ const Search = () => {
 
         <Text style={styles.offerName} className='text-center mx-auto mt-10'>لا يوجد نتائج للبحث</Text>
     }
-      </ScrollView> 
+      </SafeAreaView> 
   )
 }
 
