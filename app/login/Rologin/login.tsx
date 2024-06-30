@@ -35,7 +35,7 @@ const Login = () => {
   
 
       // Navigate to Home screen
-      router.push('/Supplier');
+      router.push('/RestrauntOwner');
     } catch (err) {
       console.error(err);
       setErrorMessage("Invalid Email or Password");
