@@ -12,7 +12,7 @@ useEffect(() => {
 }, [])
     return(
        
-        <ScrollView >
+        <ScrollView>
           <SupplierNavbar></SupplierNavbar>
           <>
       <Text style={styles.headerTitle} className="m-5">طلبات </Text>
