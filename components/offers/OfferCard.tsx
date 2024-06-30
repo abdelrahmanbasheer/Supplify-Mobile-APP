@@ -9,7 +9,6 @@ type OfferData = {
     id:string;
 }
 import styles from './offersview.style';
-import { Link } from 'expo-router';
 interface OfferCardProps {
     item: OfferData;
 }

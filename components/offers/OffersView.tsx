@@ -15,13 +15,13 @@ type offerDataType={
 const OffersView = ({data,search}:{data:offerDataType[],search:boolean} ) => {
    
     return (
-    <View style={{marginTop:20}}>
+    <ScrollView style={{marginTop:20}}>
     <View style={styles.header}>
         {
             !search &&
             <Text style={styles.headerBtn}>المزيد</Text>
         }
-    <TouchableOpacity >
+    <TouchableOpacity>
         {
             search?
             <Text style={styles.headerTitle} className='ml-[140px]'>النتائج</Text>
@@ -30,6 +30,7 @@ const OffersView = ({data,search}:{data:offerDataType[],search:boolean} ) => {
         }
       </TouchableOpacity>
       </View>
+     
       <FlatList
       data={data}
     renderItem={({item})=>(
@@ -39,8 +40,10 @@ const OffersView = ({data,search}:{data:offerDataType[],search:boolean} ) => {
       )}
 numColumns={2}
 contentContainerStyle={{gap:20}}
-style={{marginTop:15,paddingLeft:15,paddingRight:5}}
-/></View>
+style={{marginTop:15,paddingLeft:15,paddingRight:5,marginBottom:300}}
+/>
+
+</ScrollView>
   )
 }
 
