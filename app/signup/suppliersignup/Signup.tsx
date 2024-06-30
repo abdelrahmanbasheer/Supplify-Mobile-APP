@@ -35,19 +35,18 @@ const Signup = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password,national_id,first_name,last_name,telephone,commercial_id }),
       });
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
-      const data = await response.json();
+      
       // Navigate to Home screen
       router.push('/login/supplierLogin/login');
     } catch (err) {
       console.error(err);
-      setErrorMessage("Invalid Email or Password");
+      setErrorMessage("Failed");
       
     }
   };
