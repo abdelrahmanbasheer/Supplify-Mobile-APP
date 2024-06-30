@@ -17,6 +17,9 @@ const Signup = () => {
   const [last_name, setLastName] = useState('');
   const [telephone, setTelephone] = useState('');
   const [commercial_id, setCommercialId] = useState('');
+  const [location, setlocation] = useState('');
+  const [business_name, setbusiness_name] = useState('');
+  const [minimum_order_price, setminimum_order_price] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const router = useRouter();
 
@@ -27,15 +30,18 @@ const Signup = () => {
     first_name: string,
     last_name: string,
     telephone: string,
-    commercial_id: string
-  ) => {
+    commercial_id: string,
+    location:string,
+    business_name:string,
+    minimum_order_price:string
+  )=> {
     try {
       const response = await fetch("http://localhost:3000/api/auth/owner/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password,national_id,first_name,last_name,telephone,commercial_id }),
+        body: JSON.stringify({ email, password,location,first_name,last_name,telephone,business_name,commercial_id,national_id,minimum_order_price}),
       });
 
       if (!response.ok) {
@@ -82,7 +88,7 @@ const Signup = () => {
              
               <Text style={styles.offerName} className='mt-5'>كلمه السر</Text>
               <TextInput
-                textContentType="password"
+             
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
                 placeholder=""
                 value={password}
@@ -90,34 +96,34 @@ const Signup = () => {
               />
               <Text style={styles.offerName} className='mt-5'>الرقم القومي</Text>
               <TextInput
-                textContentType="password"
+          
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
-                placeholder="National ID"
+              
                 value={national_id}
                 onChangeText={setNationalId}
          
               />
               <Text style={styles.offerName} className='mt-5'>الاسم الاول</Text>
               <TextInput
-                textContentType="password"
+          
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
-                placeholder="First Name"
+                
                 value={first_name}
                 onChangeText={setFirstName}
          
               />
               <Text style={styles.offerName} className='mt-5'>الاسم الاخير</Text>
               <TextInput
-                textContentType="password"
+             
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
-                placeholder="Last Name"
+                
                 value={last_name}
                 onChangeText={setLastName}
              
               />
               <Text style={styles.offerName} className='mt-5'>رقم التليفون</Text>
               <TextInput
-                textContentType="password"
+              
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
                 value={telephone}
                 onChangeText={setTelephone}
@@ -126,15 +132,42 @@ const Signup = () => {
               />
               <Text style={styles.offerName} className='mt-5'>الرقم التجاري</Text>
               <TextInput
-                textContentType="password"
+                
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
-                placeholder="Commercial ID"
+               
                 value={commercial_id}
                 onChangeText={setCommercialId}
                 
               />
+              <Text style={styles.offerName} className='mt-5'>العنوان</Text>
+              <TextInput
+               
+                className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
+               
+                value={location}
+                onChangeText={setlocation}
+                
+              />
+              <Text style={styles.offerName} className='mt-5'>اسم المكان</Text>
+              <TextInput
+             
+                className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
+               
+                value={business_name}
+                onChangeText={setbusiness_name}
+                
+              />
+              <Text style={styles.offerName} className='mt-5'>الحد الادني للطلبات</Text>
+              <TextInput
+             
+                className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
+               
+                value={minimum_order_price}
+                onChangeText={setminimum_order_price}
+                
+              />
               <Text style={styles.offerName} className='mt-5 text-red-500'>{errorMessage}</Text>
-               <Button title="sign up" onPress={() => onSubmit(email, password,national_id,first_name,last_name,telephone,commercial_id)} />
+               <Button title="sign up" onPress={() => onSubmit(email, password,national_id,first_name,last_name,telephone,commercial_id,location,business_name,minimum_order_price)} />
               {/* <Link href={"/Supplier"} className='p-3 bg-[#69B056] rounded-3xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>تسجيل</Text>
               </Link> */}
