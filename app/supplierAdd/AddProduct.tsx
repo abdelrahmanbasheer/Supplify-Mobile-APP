@@ -31,7 +31,7 @@ const AddProduct = () => {
     description: string,
   ) => {
     try {
-      const response = await fetch("http://localhost:3000/products", {
+      const response = await fetch("http://192.168.1.12:3000/products", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

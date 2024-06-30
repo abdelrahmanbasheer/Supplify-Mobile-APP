@@ -63,6 +63,9 @@ const Navbar = () => {
             <Link className='h-full' href={`/search/Search`}>
             <Image source={require('../../assets/icons/Search.png')} ></Image>
             </Link>
+            <Link className='h-full' href={`/wishlist/Wishlist`}>
+            <Image source={require('../../assets/icons/shopIcon.png')} ></Image>
+            </Link>
             </View>
         ),
         

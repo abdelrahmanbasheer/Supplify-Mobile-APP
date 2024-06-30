@@ -30,7 +30,7 @@ const Signup = () => {
     commercial_id: string
   ) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/owner/signup", {
+      const response = await fetch("http://192.168.1.12:3000/api/auth/owner/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const Login = () => {
 
   const onSubmit = async (email:string, password:string) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/owner/login", {
+      const response = await fetch("http://192.168.1.12:3000/api/auth/owner/login", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

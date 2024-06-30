@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { View,Text,TouchableOpacity, FlatList,ActivityIndicator, Image, Pressable } from 'react-native'
-import { useRouter } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 import styles from './popularjobs.style'
 
 type dataTypes={
@@ -15,7 +15,7 @@ const [data, setData] = useState<dataTypes>([])
    
  const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/categories'); 
+      const response = await fetch('http://192.168.1.12:3000/categories'); 
       const data = await response.json();
       setData(data);
     } catch (error) {
@@ -86,14 +86,14 @@ const [data, setData] = useState<dataTypes>([])
           data={data}
         renderItem={({item})=>(
           <View style={{display:'flex',gap:30,}}> 
-          <Pressable style={styles.itemContainer} key={item.category_id}>
+          <Link href={`/category/${item.category_id}`} style={styles.itemContainer} key={item.category_id}>
             {
             <Image source={require('../../assets/icons/vegetables.png')}></Image>  
               
             }
           <Image source={item.img}></Image>
           <Text style={styles.headerBtn}>{item.category_name}</Text>
-          </Pressable>
+          </Link>
         </View>
         )}
         contentContainerStyle={{columnGap:20}}

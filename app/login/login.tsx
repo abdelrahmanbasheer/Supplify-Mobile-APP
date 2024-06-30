@@ -47,8 +47,7 @@ const Login = () => {
                 className='w-[350px] h-[50px] p-4 my-3 rounded-xl border-2 text-right border-[#c2c0c0]' 
                 placeholder="0123456789"
                 value={phoneNumber}
-                onChangeText={setPhoneNumber}
-                keyboardType="phone-pad" 
+                onChangeText={setPhoneNumber} 
               />
               
               <Link href={"/Supplier"} className='p-3 bg-[#69B056] rounded-3xl text-center mt-4'>

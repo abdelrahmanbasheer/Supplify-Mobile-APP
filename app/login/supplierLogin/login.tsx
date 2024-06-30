@@ -17,7 +17,7 @@ const Login = () => {
 
   const onSubmit = async (email:string, password:string) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/owner/login", {
+      const response = await fetch("http://192.168.1.12:3000/api/auth/supplier/login", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +79,6 @@ const Login = () => {
                 placeholder=""
                 value={password}
                 onChangeText={setpassword}
-                keyboardType="phone-pad" 
               />
               <Text style={styles.offerName} className='mt-5 text-red-500'>{errorMessage}</Text>
                <Button title="Login" onPress={() => onSubmit(email, password)} />
