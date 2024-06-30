@@ -31,7 +31,7 @@ const Cart = () => {
                 <View className='mx-auto mt-16'>
                     <Image source={require("../../assets/images/Empty_Cart.png")} className='w-[300px] h-[300px]'></Image>
                     <Text className='text-[#69B056] font-bold text-[20px] text-center mt-5'>لا يوجد منتجات في العربة</Text>
-                    <Link href="/" className='p-3 bg-[#CAE9D9] rounded-3xl text-center mt-4'>
+                    <Link href="/RestrauntOwner" className='p-3 bg-[#CAE9D9] rounded-3xl text-center mt-4'>
                         <Text className='text-black' style={styles.offerName}>تصفح المنتجات</Text>
                         </Link>
                 </View>

@@ -79,7 +79,6 @@ const Login = () => {
                 placeholder=""
                 value={password}
                 onChangeText={setpassword}
-                keyboardType="phone-pad" 
               />
               <Text style={styles.offerName} className='mt-5 text-red-500'>{errorMessage}</Text>
                <Button title="Login" onPress={() => onSubmit(email, password)} />
