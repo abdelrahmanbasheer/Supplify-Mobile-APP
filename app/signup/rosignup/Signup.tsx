@@ -67,7 +67,7 @@ const Signup = () => {
               />
 
        
-              <Text style={styles.offerName} className='mt-16 text-xl'>تسجيل كتاجر</Text>
+              <Text style={styles.offerName} className='mt-16 text-xl'>تسجيل كمطعم</Text>
               
              
               <Text style={styles.offerName} className='mt-5'>بريد الإلكتروني *</Text>
@@ -134,7 +134,7 @@ const Signup = () => {
                 
               />
               <Text style={styles.offerName} className='mt-5 text-red-500'>{errorMessage}</Text>
-               <Button title="sign up" onPress={() => onSubmit(email, password,national_id,first_name,last_name,telephone,commercial_id)} />
+               <Button color="#6CCE9B" title="sign up" onPress={() => onSubmit(email, password,national_id,first_name,last_name,telephone,commercial_id)} />
               {/* <Link href={"/Supplier"} className='p-3 bg-[#69B056] rounded-3xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>تسجيل</Text>
               </Link> */}
