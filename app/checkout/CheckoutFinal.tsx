@@ -10,7 +10,7 @@ const CheckoutFinal = () => {
      <PageNavbar title={" تم الدفع"}></PageNavbar>
      <Image source={require("@/assets/images/payment_success.png")} className='w-[100px] h-[100px] mx-auto mt-40'></Image>
      <Text className='text-black mx-auto mt-10 w-[70%]' style={styles.offerName}>تم الدفع بنجاح يمكنك متابعه الطلب من خلال صفحه الطلبات</Text>
-     <Link href={"/"} className='p-3 bg-[#CAE9D9] rounded-3xl text-center mt-3 w-[312px] mx-auto'>
+     <Link href={"/RestrauntOwner"} className='p-3 bg-[#CAE9D9] rounded-3xl text-center mt-3 w-[312px] mx-auto'>
             <Text className='text-black' style={styles.offerName}>العوده للصفحه الرئيسيه</Text>
             </Link>
       </View>

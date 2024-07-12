@@ -81,7 +81,7 @@ const Login = () => {
                 onChangeText={setpassword}
               />
               <Text style={styles.offerName} className='mt-5 text-red-500'>{errorMessage}</Text>
-               <Button title="Login" onPress={() => onSubmit(email, password)} />
+               <Button title="Login" color={"#69B056"} onPress={() => onSubmit(email, password)} />
               {/* <Link href={"/Supplier"} className='p-3 bg-[#69B056] rounded-3xl text-center mt-4'>
                 <Text className='text-white' style={styles.offerName}>تسجيل</Text>
               </Link> */}

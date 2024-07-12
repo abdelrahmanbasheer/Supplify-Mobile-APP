@@ -50,7 +50,7 @@ const Navbar = () => {
             <Image source={require('../../assets/icons/ArrowDown.png')}></Image>
             </Pressable>
             <View style={{display:'flex',flexDirection:"row",gap:10}}>
-            <Text className='' style={styles.addressText}>العيسوي مع خليل حمادة , الأسكندرية</Text>
+            <Text className='' style={styles.addressText}>الأسكندرية</Text>
             </View>
             </View>
             </View> 
@@ -63,8 +63,8 @@ const Navbar = () => {
             <Link className='h-full' href={`/search/Search`}>
             <Image source={require('../../assets/icons/Search.png')} ></Image>
             </Link>
-            <Link className='h-full' href={`/wishlist/Wishlist`}>
-            <Image source={require('../../assets/icons/shopIcon.png')} ></Image>
+            <Link className='h-full' href={`/orders/Rorders`}>
+            <Image source={require('../../assets/icons/File Document.png')} ></Image>
             </Link>
             </View>
         ),

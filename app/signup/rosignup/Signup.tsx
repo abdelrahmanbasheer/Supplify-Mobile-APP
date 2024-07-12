@@ -43,7 +43,7 @@ const Signup = () => {
       }
       
       // Navigate to Home screen
-      router.push('/login/supplierLogin/login');
+      router.push('/login/Rologin/login');
     } catch (err) {
       console.error(err);
       setErrorMessage("Failed");

@@ -19,14 +19,17 @@ const SupplierNavbar = () => {
              <Image source={require('../../assets/icons/supplier_navbar_icon.png')} style={{marginTop:20}}></Image>
             <View style={{display:'flex',flexDirection:"column",gap:5,"alignItems":"flex-start",marginTop:20}}>
             <Text style={styles.headerText}>يوسف المنير</Text>
-            <Text className='' style={styles.addressText}>العيسوي مع خليل حمادة , الأسكندرية</Text>
+            <Text className='' style={styles.addressText}>الأسكندرية</Text>
             </View>
             </View> 
         ),
         headerRight:()=>(
           <View style={{display:'flex',flexDirection:"row",gap:15,marginRight:5,paddingTop:30}} className='h-[100px] items-baseline'>
-             <Link className='h-full' href={`/Supplier`}>
+             <Link className='h-full' href={`/supplierEdit/EditProduct`}>
             <Image  source={require('../../assets/icons/File Document.png')} ></Image>
+            </Link>
+             <Link className='h-full' href={`/SupplierProducts/SupplierProd`}>
+            <Image  source={require('../../assets/icons/restowner_shop.png')} ></Image>
             </Link>
             </View>
         ),
